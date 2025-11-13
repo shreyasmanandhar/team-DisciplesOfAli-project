@@ -1,0 +1,3 @@
+Name: Shreyas Manandhar
+Role: Repository Owner, Developer, Collaborator
+Favorite Programming Language: Python
