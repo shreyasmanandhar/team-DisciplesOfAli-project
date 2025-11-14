@@ -10,7 +10,7 @@ This is a browser-based Hide & Seek game where players input their info, select 
 - Team Name: Disciples of Ali
 - Project: Campus Hide & Seek Browser Game
 - Technology: HTML, CSS, JavaScript
-- Goal: By [11/18/2025], we will have a working browser-based Hide & Seek game with player info, target assignment, and game history.
+- Goal: By 11/18/2025, we will have a working browser-based Hide & Seek game with player info, target assignment, and game history.
 
 ## User Stories
 
