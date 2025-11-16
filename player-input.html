@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Player Info Input</title>
+<link rel="stylesheet" href="player-input-styles.css" />
+</head>
+<body>
+<main class="menu" role="main">
+<div class="header">
+<div>
+<h1>Player details</h1>
+<p class="lead">Give a name and a few appearance hints. Keep hints short — these are used to help identify the character.</p>
+</div>
+</div>
+
+
+<form id="userForm" autocomplete="on" novalidate>
+<div class="field">
+<label for="name">Name</label>
+<input id="name" name="name" type="text" placeholder="e.g. Maya Carter" required minlength="2" maxlength="80"/>
+<div class="hint">Required. Enter your full name or preferred name.</div>
+</div>
+
+
+<div class="field">
+<label for="appearance">Appearance hints</label>
+<textarea id="appearance" name="appearance" placeholder="e.g. short brown hair, green eyes, small scar on left eyebrow, usually wears denim jacket" maxlength="600"></textarea>
+<div class="hint">Provide clear, brief hints. Max 600 characters.</div>
+</div>
+
+
+<button type="submit" class="btn">Save details</button>
+<p class="hint">Tip: keep each hint to one short phrase.</p>
+</form>
+</main>
+
+
+<script src="player-input-script.js"></script> 
+</body>
+</html>
