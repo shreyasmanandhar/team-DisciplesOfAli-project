@@ -1,0 +1,3 @@
+Name: Jayden Thompson
+Role: Frontend Developer
+Favorite Programming Language: C++ 
