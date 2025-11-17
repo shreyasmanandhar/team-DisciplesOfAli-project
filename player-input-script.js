@@ -1,4 +1,4 @@
-const players = [];
+const players = JSON.parse(localStorage.getItem("players")) || [];
 
 function savePlayer() 
 {
@@ -24,10 +24,16 @@ function savePlayer()
 
     // save confirm
     alert("Player saved:\n" + JSON.stringify(player));
+    // allows use of array on another page
+    localStorage.setItem("players", JSON.stringify(players));
     console.log("All players:", players);
+
+    // adds navigation to game menu page
+    window.location.href = "game-setup-menu.html";
 }
 
 document.getElementById('userForm').addEventListener('submit', function(e) {
    e.preventDefault();
    savePlayer(); 
+
 });
