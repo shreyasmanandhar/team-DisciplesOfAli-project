@@ -1,25 +1,29 @@
-// game-setup-menu1.js
+// TEMP player list — replace later with backend or server storage
+let allPlayers = [];
 
-document.getElementById("startGameBtn").addEventListener("click", () => {
+document.getElementById("gameSetupForm").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-    const locationValue = document.getElementById("locationSelect").value;
-    const timeValue = document.getElementById("timeSelect").value;
+  // Collect values
+  const hints = document.getElementById("hints").value;
+  const location = document.getElementById("location").value;
+  const time = document.getElementById("time").value;
 
-    // VALIDATION (required)
-    if (!locationValue || !timeValue) {
-        alert("Please select both location and estimated play time.");
-        return;
-    }
+  // Temporary unique ID
+  const playerId = Date.now().toString();
 
-    // SAVE DATA FOR NEXT STEP (Issue 3 will use this)
-    const gameSetup = {
-        location: locationValue,
-        timeLimit: timeValue
-    };
+  // Player data object
+  const currentPlayer = {
+    id: playerId,
+    hints: hints,
+    location: location,
+    time: time
+  };
 
-    localStorage.setItem("gameSetup", JSON.stringify(gameSetup));
+  // Add player (for demo only)
+  allPlayers.push(currentPlayer);
 
-    // Redirect to next screen (gameplay)
-    // Replace with your actual next page
-    window.location.href = "game.html"; 
+  console.log("Player Created:", currentPlayer);
+  alert("Game Started! Your info has been saved.");
+
 });

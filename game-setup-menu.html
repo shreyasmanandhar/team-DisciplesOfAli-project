@@ -1,39 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Setup</title>
-    <link rel="stylesheet" href="setup.css" />
+  <meta charset="UTF-8">
+  <title>Game Setup</title>
+  <link rel="stylesheet" href="setup.css">
 </head>
 <body>
 
-    <div class="game-setup-container">
-        <h2>Game Setup</h2>
+  <h1>Game Setup</h1>
 
-        <!-- LOCATION DROPDOWN -->
-        <label for="locationSelect">Choose Location:</label>
-        <select id="locationSelect">
-            <option value="">-- Select Location --</option>
-            <option value="Union">Union</option>
-            <option value="Library">Library</option>
-            <option value="Discovery Park">Discovery Park</option>
-            <option value="Business Building">Business Building</option>
-        </select>
+  <form id="gameSetupForm">
+    <!-- Appearance / Hints -->
+    <label for="hints">Describe your appearance:</label>
+    <textarea id="hints" name="hints" required placeholder="Clothes, color, height..."></textarea>
 
-        <!-- TIME DROPDOWN -->
-        <label for="timeSelect">Estimated Play Time:</label>
-        <select id="timeSelect">
-            <option value="">-- Select Time --</option>
-            <option value="5">5 minutes</option>
-            <option value="10">10 minutes</option>
-            <option value="15">15 minutes</option>
-        </select>
+    <!-- Location Dropdown -->
+    <label for="location">Choose Location:</label>
+    <select id="location" name="location" required>
+      <option value="">--Select--</option>
+      <option value="Library">Library</option>
+      <option value="Cafeteria">Cafeteria</option>
+      <option value="Bus Stop">Bus Stop</option>
+      <option value="Campus Lawn">Campus Lawn</option>
+    </select>
 
-        <!-- START BUTTON -->
-        <button id="startGameBtn">Start Game</button>
-    </div>
+    <!-- Time Dropdown -->
+    <label for="time">Estimated Play Time:</label>
+    <select id="time" name="time" required>
+      <option value="">--Select--</option>
+      <option value="5">5 minutes</option>
+      <option value="10">10 minutes</option>
+      <option value="15">15 minutes</option>
+    </select>
 
-    <script src="game-setup-menu1.js"></script>
+    <button type="submit">Start Game</button>
+  </form>
+
+  <!-- Assignment code -->
+  <script src="assignTarget.js"></script>
+
+  <!-- your issue 2 code -->
+  <script src="game-setup-menu1.js"></script>
+
 </body>
 </html>
