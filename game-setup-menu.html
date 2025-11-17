@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Setup</title>
+    <link rel="stylesheet" href="setup.css" />
+</head>
+<body>
+
+    <div class="game-setup-container">
+        <h2>Game Setup</h2>
+
+        <!-- LOCATION DROPDOWN -->
+        <label for="locationSelect">Choose Location:</label>
+        <select id="locationSelect">
+            <option value="">-- Select Location --</option>
+            <option value="Union">Union</option>
+            <option value="Library">Library</option>
+            <option value="Discovery Park">Discovery Park</option>
+            <option value="Business Building">Business Building</option>
+        </select>
+
+        <!-- TIME DROPDOWN -->
+        <label for="timeSelect">Estimated Play Time:</label>
+        <select id="timeSelect">
+            <option value="">-- Select Time --</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+        </select>
+
+        <!-- START BUTTON -->
+        <button id="startGameBtn">Start Game</button>
+    </div>
+
+    <script src="game-setup-menu1.js"></script>
+</body>
+</html>

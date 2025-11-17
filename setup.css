@@ -1,0 +1,25 @@
+.game-setup-container {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.game-setup-container label {
+    margin-top: 12px;
+    display: block;
+}
+
+.game-setup-container select,
+.game-setup-container button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+}
+
+#startGameBtn {
+    cursor: pointer;
+    margin-top: 15px;
+}
