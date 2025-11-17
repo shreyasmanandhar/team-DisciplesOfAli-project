@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Game Setup</title>
+  <link rel="stylesheet" href="setup.css">
+</head>
+<body>
+
+  <h1>Game Setup</h1>
+
+  <form id="gameSetupForm">
+    <!-- Appearance / Hints -->
+    <label for="hints">Describe your appearance:</label>
+    <textarea id="hints" name="hints" required placeholder="Clothes, color, height..."></textarea>
+
+    <!-- Location Dropdown -->
+    <label for="location">Choose Location:</label>
+    <select id="location" name="location" required>
+      <option value="">--Select--</option>
+      <option value="Library">Library</option>
+      <option value="Cafeteria">Cafeteria</option>
+      <option value="Bus Stop">Bus Stop</option>
+      <option value="Campus Lawn">Campus Lawn</option>
+    </select>
+
+    <!-- Time Dropdown -->
+    <label for="time">Estimated Play Time:</label>
+    <select id="time" name="time" required>
+      <option value="">--Select--</option>
+      <option value="5">5 minutes</option>
+      <option value="10">10 minutes</option>
+      <option value="15">15 minutes</option>
+    </select>
+
+    <button type="submit">Start Game</button>
+  </form>
+
+  <!-- Assignment code -->
+  <script src="assignTarget.js"></script>
+
+  <!-- your issue 2 code -->
+  <script src="game-setup-menu1.js"></script>
+
+</body>
+</html>
