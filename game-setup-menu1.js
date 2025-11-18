@@ -1,29 +1,55 @@
-// TEMP player list — replace later with backend or server storage
-let allPlayers = [];
+console.log("Loaded game-setup-menu1.js");
 
-document.getElementById("gameSetupForm").addEventListener("submit", function(event) {
-  event.preventDefault();
+if (!window.gameSetupAttached) {
+  window.gameSetupAttached = true;
 
-  // Collect values
-  const hints = document.getElementById("hints").value;
-  const location = document.getElementById("location").value;
-  const time = document.getElementById("time").value;
+  const form = document.getElementById("gameSetupForm");
+  const goToLobbyBtn = document.getElementById("goToLobby");
+  const clearBtn = document.getElementById("clearPlayers");
 
-  // Temporary unique ID
-  const playerId = Date.now().toString();
+  // Add player
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  // Player data object
-  const currentPlayer = {
-    id: playerId,
-    hints: hints,
-    location: location,
-    time: time
-  };
+    const name = document.getElementById("name").value.trim();
+    const hints = document.getElementById("hints").value.trim();
+    const location = document.getElementById("location").value;
+    const time = document.getElementById("time").value;
 
-  // Add player (for demo only)
-  allPlayers.push(currentPlayer);
+    if (!name || !hints || !location || !time) {
+      alert("Please fill in all fields.");
+      return;
+    }
 
-  console.log("Player Created:", currentPlayer);
-  alert("Game Started! Your info has been saved.");
+    const newPlayer = {
+      id: Date.now().toString(),
+      name,
+      hints,
+      location,
+      time
+    };
 
-});
+    let allPlayers = JSON.parse(localStorage.getItem("players")) || [];
+    allPlayers.push(newPlayer);
+    localStorage.setItem("players", JSON.stringify(allPlayers));
+
+    alert("Player added!");
+    form.reset();
+  });
+
+  // Go to lobby
+  goToLobbyBtn.addEventListener("click", function () {
+    let allPlayers = JSON.parse(localStorage.getItem("players")) || [];
+    if (allPlayers.length === 0) {
+      alert("No players added yet!");
+      return;
+    }
+    window.location.href = "lobby.html";
+  });
+
+  // Clear all players
+  clearBtn.addEventListener("click", () => {
+    localStorage.removeItem("players");
+    alert("All players cleared!");
+  });
+}
