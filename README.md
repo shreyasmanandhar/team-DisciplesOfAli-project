@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo/log.jpg" alt="Project Logo" width="200"/>
+  <img src="logo/logo.jpg" alt="Project Logo" width="200"/>
 
   # Campus Hide & Seek
 
