@@ -7,9 +7,11 @@
 ## v1.0.0 - 2025-11-24
 
 ### Features
-- Implemented core user functionality (entering info, joining game, game operation)
-- Responsive user interface
-- Basic integration of discrete functions (menu, UI, login, lobby)
+- Input Player Info
+- Game Setup Menu
+- Game Lobby
+- Target Assignment
+- Responsive UI
 
 ### Bug Fixes
 - Fixed minor UI inconsistencies
