@@ -1,5 +1,10 @@
 {
     "name": "team-DisciplesOfAli-project",
-    "version": "0.3.0",
-    "description": "JSON for git group assignment 3"
+    "version": "1.0.0",
+    "description": "update...",
+    "scripts": {
+        "release": "standard-version",
+        "release:minor": "standard-version --release-as minor",
+        "release:major": "standard-version --release-as major"
+    }
 }
