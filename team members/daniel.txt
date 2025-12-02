@@ -1,0 +1,3 @@
+Name: Daniel Aluko
+Role: Developer
+Favorite Programming Language: Python and Javascript
